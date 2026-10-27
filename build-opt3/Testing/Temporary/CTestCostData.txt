@@ -1,0 +1,7 @@
+tensor 18 0.000639268
+image 18 0.000591172
+operators 18 0.00483577
+runtime 18 0.00142808
+mnist_smoke 18 0.00443972
+handwritten_image 14 0.0034777
+---

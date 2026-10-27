@@ -1,0 +1,212 @@
+Start testing: Sep 23 02:57 CST
+----------------------------------------------------------
+1/4 Testing: tensor
+1/4 Test: tensor
+Command: "/home/michael/Micro_flow_PI4/build-opt1/test_tensor"
+Directory: /home/michael/Micro_flow_PI4/build-opt1
+"tensor" start time: Sep 23 02:57 CST
+Output:
+----------------------------------------------------------
+
+  MicroFlow Tensor Tests
+  ========================
+
+  Testing tensor_creation... PASS
+  Testing tensor_copy... PASS
+  Testing tensor_reshape... PASS
+  Testing tensor_operations... PASS
+  Testing tensor_zeros_ones... PASS
+  Testing allocator_basic... PASS
+  Testing allocator_alignment... PASS
+
+  ========================
+  Results: 7/7 tests passed
+  All tests PASSED!
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tensor" end time: Sep 23 02:57 CST
+"tensor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: image
+2/4 Test: image
+Command: "/home/michael/Micro_flow_PI4/build-opt1/test_image"
+Directory: /home/michael/Micro_flow_PI4/build-opt1
+"image" start time: Sep 23 02:57 CST
+Output:
+----------------------------------------------------------
+╔════════════════════════════════════════════╗
+║     MicroFlow Image Loading Test          ║
+╚════════════════════════════════════════════╝
+
+Test 1: Loading MNIST .bin file...
+  ✓ Loaded successfully
+  Shape: [1, 28, 28]
+
+Test 2: Image processing...
+  ✓ RGB [56x56] -> Gray [56x56]
+  ✓ Resized to [28x28]
+  ✓ Inverted colors
+
+✅ All image tests passed!
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"image" end time: Sep 23 02:57 CST
+"image" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: operators
+3/4 Test: operators
+Command: "/home/michael/Micro_flow_PI4/build-opt1/test_operators"
+Directory: /home/michael/Micro_flow_PI4/build-opt1
+"operators" start time: Sep 23 02:57 CST
+Output:
+----------------------------------------------------------
+All operator correctness tests passed.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"operators" end time: Sep 23 02:57 CST
+"operators" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: mnist_smoke
+4/4 Test: mnist_smoke
+Command: "/home/michael/Micro_flow_PI4/build-opt1/mnist_demo" "/home/michael/Micro_flow_PI4/models/mnist_improved.mflow" "/home/michael/Micro_flow_PI4/image/test_input.bin"
+Directory: /home/michael/Micro_flow_PI4/build-opt1
+"mnist_smoke" start time: Sep 23 02:57 CST
+Output:
+----------------------------------------------------------
+
+╔════════════════════════════════════════════╗
+║     MicroFlow MNIST Inference Demo        ║
+║     ARM64 / ROCK 4D Optimized             ║
+╚════════════════════════════════════════════╝
+
+Initializing inference engine...
+Loading model from: /home/michael/Micro_flow_PI4/models/mnist_improved.mflow
+Loading model: MicroFlow_ImprovedMNIST
+  Layers: 11
+  Tensors: 8
+  Data offset: 352
+  Layer 0: type=0 (Input)
+  Layer 1: type=1 (Conv2D)
+    Kernel shape: [32, 1, 3, 3]
+    Bias shape: [32]
+  Layer 2: type=5 (ReLU)
+  Layer 3: type=9 (MaxPool)
+  Layer 4: type=1 (Conv2D)
+    Kernel shape: [64, 32, 3, 3]
+    Bias shape: [64]
+  Layer 5: type=5 (ReLU)
+  Layer 6: type=9 (MaxPool)
+  Layer 7: type=14 (Flatten)
+  Layer 8: type=13 (Linear)
+    Weight shape: [3136, 128]
+    Bias shape: [128]
+  Layer 9: type=5 (ReLU)
+  Layer 10: type=13 (Linear)
+    Weight shape: [128, 10]
+    Bias shape: [10]
+Auto-added Softmax layer for probability output
+
+Allocating intermediate tensors...
+Allocating intermediate tensors...
+Memory allocated for 9 intermediate tensors.
+  Number of intermediate tensors: 9
+    Tensor 0: [1, 28, 28]
+    Tensor 1: [32, 28, 28]
+    Tensor 2: [32, 14, 14]
+    Tensor 3: [64, 14, 14]
+    Tensor 4: [64, 7, 7]
+    Tensor 5: [3136]
+    Tensor 6: [128]
+    Tensor 7: [10]
+    Tensor 8: [10]
+Model loaded successfully!
+
+Loading image from: /home/michael/Micro_flow_PI4/image/test_input.bin
+  Input stats: min=0, max=1, nonzero=115/784
+
+  MNIST Image (28x28):
+  ----------------------------
+  |                            |
+  |                            |
+  |                            |
+  |                            |
+  |                            |
+  |                            |
+  |                            |
+  |      :Ooo..                |
+  |      O@@@@@OOOOOOOOo.      |
+  |      .:.:oO@O@@@@O@@o      |
+  |            . .... @@:      |
+  |                  :@O       |
+  |                  @@:       |
+  |                 o@@.       |
+  |                .@@.        |
+  |                o@O         |
+  |                O@.         |
+  |               :@O          |
+  |              .@@.          |
+  |              O@o           |
+  |             O@O.           |
+  |            .@@:            |
+  |           .O@:             |
+  |           o@@.             |
+  |          .@@@.             |
+  |          :@@O.             |
+  |          :@O               |
+  |                            |
+  ----------------------------
+
+Running inference...
+  Prediction Scores:
+  -----------------
+  Digit 0: 0.000000  
+  Digit 1: 0.000001  
+  Digit 2: 0.000003  
+  Digit 3: 0.000001  
+  Digit 4: 0.000000  
+  Digit 5: 0.000000  
+  Digit 6: 0.000000  
+  Digit 7: 0.999994  ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪
+  Digit 8: 0.000000  
+  Digit 9: 0.000002  
+
+  ========================================
+  Predicted Digit: [7]
+  Confidence: 100.00%
+  ========================================
+
+
+  Running 100 inference iterations...
+
+  ========================================
+  Performance Statistics:
+  ========================================
+  Total time:      135.27 ms
+  Average time:    1.35 ms
+  Min time:        1.25 ms
+  Max time:        3.56 ms
+  Throughput:      739.3 inferences/sec
+  ========================================
+
+Demo completed successfully!
+
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[Predicted Digit: \[7\]]
+"mnist_smoke" end time: Sep 23 02:57 CST
+"mnist_smoke" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 23 02:57 CST

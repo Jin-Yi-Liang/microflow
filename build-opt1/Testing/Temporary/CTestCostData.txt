@@ -1,0 +1,5 @@
+tensor 2 0.00584417
+image 2 0.00517005
+operators 2 0.0188438
+mnist_smoke 2 0.0830961
+---

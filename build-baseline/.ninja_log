@@ -1,0 +1,23 @@
+# ninja log v5
+3	2090	1790100998458807113	CMakeFiles/microflow_core.dir/src/memory/allocator.cpp.o	893f87f9a77ca251
+4	5242	1790101001610708578	CMakeFiles/microflow_core.dir/src/memory/tensor.cpp.o	b2f56080bf5bbffd
+7	5987	1790101002354685287	CMakeFiles/microflow_core.dir/src/conv/conv.cpp.o	f4d900225c82b814
+6	7927	1790101004290624619	CMakeFiles/microflow_core.dir/src/gemm/gemm.cpp.o	dd72001d049fd6bd
+2093	8388	1790101004754610067	CMakeFiles/mnist_demo.dir/examples/mnist_demo.cpp.o	42890ac31da8ab68
+10	9062	1790101005430588856	CMakeFiles/benchmark.dir/tests/benchmark.cpp.o	1be4d31f9b71c08b
+8	9439	1790101005802577180	CMakeFiles/microflow_core.dir/src/layers/layers.cpp.o	33ba4b5194c20fab
+5	9740	1790101006102567762	CMakeFiles/microflow_core.dir/src/memory/image.cpp.o	ec0668a2d30ce3eb
+5244	9946	1790101006310561229	CMakeFiles/image_inference.dir/examples/image_inference.cpp.o	a31b9baddad1ac85
+7928	11863	1790101008230500892	CMakeFiles/image_preprocess.dir/examples/image_preprocess.cpp.o	7bec953bf9bad486
+5988	12204	1790101008570490198	CMakeFiles/image_demo.dir/examples/image_demo.cpp.o	c1f3090666147537
+9	12335	1790101008698486172	CMakeFiles/microflow_core.dir/src/runtime/runtime.cpp.o	90164c9761a68498
+12335	12485	1790101008850481391	libmicroflow_core.a	6c64565c112c1788
+8389	12856	1790101009222469685	CMakeFiles/test_image.dir/tests/test_image.cpp.o	74f627bb9b6bb991
+12485	22862	1790101019222153891	benchmark	74bc0ff674aec0ea
+12486	25937	1790101022298056317	mnist_demo	e002c2342e4dec32
+12856	42093	1790101038453540598	test_image	9549d4f2af874e0e
+12488	42644	1790101039005522886	image_preprocess	513b6965c4966af3
+12487	53999	1790101050361157140	image_inference	22ae9a45d0521f7
+12487	55380	1790101051745112396	image_demo	ecf14d2699bbd48b
+9063	80716	1790101077072287363	CMakeFiles/web_demo.dir/examples/web_demo.cpp.o	667008b46e17ddd0
+80718	89623	1790101085983994398	web_demo	ba1a8c56210155a1
